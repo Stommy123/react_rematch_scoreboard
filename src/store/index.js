@@ -1,7 +1,7 @@
-import { init } from '@rematch/core'
-import * as models from '../models'
+import { init } from '@rematch/core';
+import * as models from '../models';
 
-export const store = init({ models })
+export const store = init({ models });
 
 
 

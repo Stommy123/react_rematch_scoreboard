@@ -30,7 +30,7 @@ class AddPlayerForm extends Component {
 				</form>
 			</div>
 		);
-	}
-}
+	};
+};
 
 export default AddPlayerForm;

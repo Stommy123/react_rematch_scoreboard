@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Header from '../components/Header/Header';
 import PlayerList from '../components/Players/PlayerList';
 import AddPlayerForm from '../components/Form/AddPlayerForm';
-import PlayerDetail from '../components/Players/PlayerDetail'
+import PlayerDetail from '../components/Players/PlayerDetail';
 
 class App extends Component {
 	getHighScore = _ => {
@@ -35,18 +35,18 @@ class App extends Component {
 			</div>
 		);
 	}
-}
+};
 
 const mapStateToProps = state => ({ 
 	state: state,
 	players: state.default.players,
 	selectedPlayerIndex: state.default.selectedPlayerIndex, 
-})
+});
 const mapDispatchToProps = players => ({
 	addPlayer: players.default.addPlayer,
 	removePlayer: players.default.removePlayer,
 	updatePlayerScore: players.default.updatePlayerScore,
 	selectPlayer: players.default.selectPlayer,
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App);

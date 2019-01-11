@@ -17,6 +17,6 @@ const Stats = ({ players }) => {
             </tbody>
         </table>
     )
-}
+};
 
 export default Stats;

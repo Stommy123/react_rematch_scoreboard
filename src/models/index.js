@@ -1,2 +1,2 @@
 import players from './players';
-export default players
+export default players;

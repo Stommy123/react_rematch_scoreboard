@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 
-export default class Stopwatch extends Component {
+class Stopwatch extends Component {
 	state = {
 		isRunning: false,
 		previouseTime: 0,
 		elapsedTime: 0,    
 	};
 	
-	componentDidMount() { this.interval = setInterval(this.onTick); }
+	componentDidMount() { this.interval = setInterval(this.onTick) };
 
-	componentWillUnmount() { clearInterval(this.interval); }
+	componentWillUnmount() { clearInterval(this.interval) };
 	
 	handleStopWach = _ => {
-		this.setState(prevState => ({ isRunning: !prevState.isRunning }))
-		if (!this.state.isRunning) this.setState({ previousTime: Date.now() })
-	}
+		this.setState(prevState => ({ isRunning: !prevState.isRunning }));
+		if (!this.state.isRunning) this.setState({ previousTime: Date.now() });
+	};
 
 	onReset = _ => {
 		this.setState({
@@ -24,7 +24,7 @@ export default class Stopwatch extends Component {
 	};
 
 	onTick = _ => {
-		const { isRunning } = this.state
+		const { isRunning } = this.state;
 		if (isRunning) {
 			const now = Date.now();
 			this.setState({
@@ -35,7 +35,7 @@ export default class Stopwatch extends Component {
 	};
 	
 	render() {
-		const { isRunning, elapsedTime } = this.state
+		const { isRunning, elapsedTime } = this.state;
 		const seconds = Math.floor(elapsedTime / 1000);
 		return (
 			<div className="stopwatch" >
@@ -46,4 +46,6 @@ export default class Stopwatch extends Component {
 			</div>
 		)
 	} 
-}
+};
+
+export default Stopwatch;
