@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlayerDetail = ({ selectedPlayer }) => {
     if (selectedPlayer) return (
-        <div>
+        <div className="player-detail">
             <h3>{selectedPlayer.name}</h3>
             <ul>
                 <li>
@@ -20,7 +20,11 @@ const PlayerDetail = ({ selectedPlayer }) => {
             </ul>
         </div>
     )
-    return  <p>Click on a player to see more details</p>
+    return  (
+        <div className="player-detail">
+            <p>Click on a player to see more details</p>
+        </div>
+    )
 }
 
 export default PlayerDetail;
